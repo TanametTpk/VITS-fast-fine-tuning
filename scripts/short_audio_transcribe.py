@@ -9,6 +9,7 @@ lang2token = {
             'zh': "[ZH]",
             'ja': "[JA]",
             "en": "[EN]",
+            "th": "[TH]",
         }
 def transcribe_one(audio_path):
     # load audio and pad/trim it to fit 30 seconds

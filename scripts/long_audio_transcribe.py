@@ -18,6 +18,7 @@ if __name__ == "__main__":
             'zh': "[ZH]",
             'ja': "[JA]",
             "en": "[EN]",
+            "th": "[TH]",
         }
     elif args.languages == "CJ":
         lang2token = {

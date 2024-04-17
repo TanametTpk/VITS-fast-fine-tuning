@@ -24,3 +24,6 @@ opencc==1.1.1
 demucs
 git+https://github.com/openai/whisper.git 
 gradio
+pythainlp[attacut]
+tltk
+num2words
