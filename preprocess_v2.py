@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser.add_argument("--languages", default="CJE")
     args = parser.parse_args()
     if args.languages == "CJE":
-        langs = ["[ZH]", "[JA]", "[EN]"]
+        langs = ["[ZH]", "[JA]", "[EN]", "[TH]"]
     elif args.languages == "CJ":
         langs = ["[ZH]", "[JA]"]
     elif args.languages == "C":

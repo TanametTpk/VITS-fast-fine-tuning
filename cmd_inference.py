@@ -29,6 +29,7 @@ language_marks = {
     "日本語": "[JA]",
     "简体中文": "[ZH]",
     "English": "[EN]",
+    "Thai": "[TH]",
     "Mix": "",
 }
 

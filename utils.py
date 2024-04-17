@@ -21,9 +21,10 @@ zh_pattern = re.compile(r'[\u4e00-\u9fa5]')
 en_pattern = re.compile(r'[a-zA-Z]')
 jp_pattern = re.compile(r'[\u3040-\u30ff\u31f0-\u31ff]')
 kr_pattern = re.compile(r'[\uac00-\ud7af\u1100-\u11ff\u3130-\u318f\ua960-\ua97f]')
+th_pattern = re.compile(r'[\u0e00-\u0e7f]')
 num_pattern=re.compile(r'[0-9]')
 comma=r"(?<=[.。!！?？；;，,、:：'\"‘“”’()（）《》「」~——])"    #向前匹配但固定长度
-tags={'ZH':'[ZH]','EN':'[EN]','JP':'[JA]','KR':'[KR]'}
+tags={'ZH':'[ZH]','EN':'[EN]','JP':'[JA]','KR':'[KR]', 'TH': "[TH]"}
 
 def tag_cjke(text):
     '''为中英日韩加tag,中日正则分不开，故先分句分离中日再识别，以应对大部分情况'''
@@ -66,6 +67,8 @@ def tag_jke(text,prev_sentence=None):
             lang = "KR"
         elif en_pattern.match(char):
             lang = "EN"
+        elif th_pattern.match(char):
+            lang = "TH"
         # elif num_pattern.match(char):
         #     lang = prev_sentence
         else:
@@ -112,6 +115,8 @@ def tag_cke(text,prev_sentence=None):
             lang = "KR"
         elif en_pattern.match(char):
             lang = "EN"
+        elif th_pattern.match(char):
+            lang = "TH"
         # elif num_pattern.match(char):
         #     lang = prev_sentence
         else:
